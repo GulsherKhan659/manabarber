@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="BarberShop & Hair Salon HTML Template">
+		<meta name="description" content="The Rare Barber Shop | Auckland New Zealand">
         <meta name="author" content="DynamicLayers">
 
         <title>The Rare Barber</title>
@@ -121,8 +121,25 @@
 .book-btn:hover {
   background-color: #444;
 }
-
+.hidden{
+    display: none !important;
+}
         </style>
+
+<script>
+  function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.classList.add('hidden'); 
+      preloader.style.display="none !important";
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', hidePreloader);
+  window.addEventListener('load', hidePreloader);
+  setTimeout(hidePreloader, 1000);
+</script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -133,7 +150,7 @@
             <div class='loader' >
                 <img src="img/loading.gif" width="120" alt="">
             </div>
-        </div><!-- Preloader -->
+        </div>
 
         <header id="header" class="header-section">
             <div class="container">
