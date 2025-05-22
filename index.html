@@ -9,9 +9,24 @@
 		<meta name="description" content="BarberShop & Hair Salon HTML Template">
         <meta name="author" content="DynamicLayers">
 
-        <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
+        <title>The Rare Barber</title>
 
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+<!-- Standard Favicon -->
+<link rel="icon" type="image/x-icon" href="img/fav-icon/favicon.ico">
+
+<!-- Favicons for different resolutions -->
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" type="image/png" href="img/fav-icon/apple-touch-icon.png">
+
+<!-- Android Chrome Icons -->
+<link rel="icon"  type="image/png" sizes="192x192" href="img/fav-icon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/fav-icon/android-chrome-512x512.png">
+
+<!-- Web Manifest -->
+<link rel="manifest" href="img/fav-icon/site.webmanifest">
 
         <!-- Elegant Font Icons CSS -->
         <link rel="stylesheet" href="css/elegant-font-icons.css">
@@ -39,6 +54,75 @@
         <link rel="stylesheet" href="css/responsive.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <style>
+            .modern-hours-section {
+  background-color: #1b1b1b;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.section-heading .title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff !important;
+  margin-bottom: 10px;
+}
+
+.section-heading .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hour-item {
+  background: #fff;
+  /* border-radius: 12px; */
+  padding: 20px 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  transition: transform 0.3s ease;
+}
+
+.hour-item:hover {
+  transform: translateY(-3px);
+}
+
+.hour-item.closed {
+    background-color: #535050;
+    color: #fff;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.book-btn {
+  background-color: #363636;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #444;
+}
+
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -47,14 +131,18 @@
 
         <div id='preloader' >
             <div class='loader' >
-                <img src="img/loading.gif" width="80" alt="">
+                <img src="img/loading.gif" width="120" alt="">
             </div>
         </div><!-- Preloader -->
 
         <header id="header" class="header-section">
             <div class="container">
                 <nav class="navbar ">
-                    <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                    <a href="index.html" class="navbar-brand ">
+                        <img class="d-none d-md-block" src="img/logo.png" alt="The Rare Barber">
+                        <img class="d-md-none d-block" src="img/logo.png" width="140px" alt="The Rare Barber">
+                    </a>
+                    
                     <div class="d-flex menu-wrap align-items-center">
                        <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -75,9 +163,9 @@
                              <li><a href="contact.html">Contact</a></li>
                          </ul>
                        </div>
-                       <div class="header-btn">
-                           <a href="#" class="menu-btn">Make Appointment</a>
-                       </div>
+                       
+                       <div class="header-btn ">
+                        <a href="appointment.html#book-appointment" class="menu-btn">Make Appointment</a>
                     </div>
                 </nav>
             </div>
@@ -89,7 +177,7 @@
                     <div class="container">
                         <div class="slider_content">
                             <h3>More Than a Haircut - It's Tradition</h3>
-                            <h1>Where Precision<br>Meets Mana</h1>
+                            <h1>Where Precision<br>Meets Style</h1>
                             <p>At The Rare Barber, we honor the art of grooming with respect for heritage<br>and attention to every detail.</p>
                             <a href="#" class="default_btn">Book Now</a>
                         </div>
@@ -130,6 +218,67 @@
                 </div>
             </div>
         </section>
+
+
+        <!--  -->
+        <!--  -->
+        <!--  -->
+<section class="modern-hours-section">
+    <div class="container">
+        <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
+            <h2 class="text-white">Opening Hours</h2>
+            <div class="heading-line"></div>
+            <p>We’re here to serve you with precision and care – six days a week.</p>
+        </div>
+      <!-- <div class="section-heading text-center">
+        <h2 class="title">Opening Hours</h2>
+        <p class="subtitle">Our doors are open to serve you with excellence.</p>
+      </div> -->
+      <div class="hours-grid">
+        <div class="hour-item">
+            
+          <span class="day">Monday</span>
+          <span class="time">10:00am – 6:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Tuesday</span>
+          <span class="time">9:00am – 7:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Wednesday</span>
+          <span class="time">9:00am – 7:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Thursday</span>
+          <span class="time">9:00am – 8:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Friday</span>
+          <span class="time">9:00am – 8:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Saturday</span>
+          <span class="time">8:00am – 5:00pm</span>
+        </div>
+        <div class="hour-item closed">
+            <span class="day">Sunday</span>
+            <span class="time">Closed</span>
+          </div>
+        </div>
+        <div class="text-center mt-4 w-100">
+            <a href="appointment.html#book-appointment" class="default_btn">Book an Appointment</a>
+        </div>
+        
+      <!-- <div class="text-center mt-4">
+        <a href="appointment.html" class="book-btn">Book an Appointment</a>
+      </div> -->
+    </div>
+  </section>
+  
+
+<!--  -->
+        <!--  -->
+        <!--  -->
         
         <section class="service_section bg-grey padding">
             <div class="container">
@@ -172,91 +321,90 @@
                     <div class="heading-line"></div>
                 </div>
                 <div class="row">
-                    <!-- Haircuts Column -->
-                    <div class="col-lg-4 col-md-6 sm-padding">
+                     <!-- Haircuts Column -->
+                     <div class="col-lg-4 col-md-6 sm-padding">
                         <div class="price_wrap">
-                            <h3>Haircuts</h3>
+                            <h3>Haircuts & Styling</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Classic Men’s Cut</h4>
-                                    <p>Traditional cut with clipper finish</p>
-                                    <span class="price">$35</span>
+                                    <h4>Signature Haircut <br>(Cut, Style)</h4>
+                                    <p>Tailored haircut with styling finish</p>
+                                    <span class="price">$40</span>
                                 </li>
                                 <li>
                                     <h4>Skin Fade</h4>
-                                    <p>Sharp gradient fade with detailing</p>
-                                    <span class="price">$40</span>
+                                    <p>Precision skin fade with sharp detailing</p>
+                                    <span class="price">$50</span>
                                 </li>
                                 <li>
-                                    <h4>Scissor Cut</h4>
-                                    <p>Premium cut using only shears</p>
-                                    <span class="price">$40</span>
+                                    <h4>Taper Fade</h4>
+                                    <p>Clean, gradual fade for a sharp look</p>
+                                    <span class="price">$45</span>
                                 </li>
-                                <li>
-                                    <h4>Kids Cut (Under 12)</h4>
-                                    <p>Fun cuts for young gentlemen</p>
-                                    <span class="price">$25</span>
-                                </li>
+                                
                             </ul>
                         </div>
+                        
                     </div>
+                    <!-- Luxury -->
+               
+                    <!--  -->
         
                     <!-- Beard & Shaving Column -->
                     <div class="col-lg-4 col-md-6 sm-padding">
                         <div class="price_wrap">
-                            <h3>Beard & Shaving</h3>
+                            <h3>Kids & Teen</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Beard Trim</h4>
-                                    <p>Precision shaping & neatening</p>
-                                    <span class="price">$20</span>
+                                    <h4>Zero Fade Students Cut <br> (Under 12)</h4>
+                                    <p>Sharp zero fade style tailored for kids</p>
+                                    <span class="price">$35</span>
                                 </li>
                                 <li>
-                                    <h4>Hot Towel Shave</h4>
-                                    <p>Traditional luxury shave experience</p>
+                                    <h4>Standard Students Cut</h4>
+                                    <p>Clean and classic haircut for students</p>
                                     <span class="price">$30</span>
                                 </li>
                                 <li>
-                                    <h4>Beard Line-up</h4>
-                                    <p>Crisp edge definition</p>
-                                    <span class="price">$15</span>
+                                    <h4>Teenage Cut <br>(13–16)</h4>
+                                    <p>Trendy and age-appropriate haircut</p>
+                                    <span class="price">$40</span>
                                 </li>
-                                <li>
-                                    <h4>Full Beard Styling</h4>
-                                    <p>Complete beard transformation</p>
-                                    <span class="price">$25</span>
-                                </li>
+                                
                             </ul>
+                            
                         </div>
                     </div>
         
                     <!-- Packages & Extras Column -->
                     <div class="col-lg-4 col-md-12 sm-padding">
                         <div class="price_wrap">
-                            <h3>Premium Packages</h3>
+                            <h3>Add-ons & Extras</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Haircut + Beard Trim</h4>
-                                    <p>Complete style refresh</p>
-                                    <span class="price">$50</span>
+                                    <h4>Razor Line Enhancement</h4>
+                                    <p>Sharp, defined edges using razor precision</p>
+                                    <span class="price">$15</span>
                                 </li>
                                 <li>
-                                    <h4>Full Grooming Package</h4>
-                                    <p>Cut, beard, wash & style</p>
-                                    <span class="price">$70</span>
+                                    <h4>Black Mask / Peel-Off Cleanse</h4>
+                                    <p>Deep-cleansing peel-off facial treatment</p>
+                                    <span class="price">$25</span>
                                 </li>
                                 <li>
-                                    <h4>Black Mask Facial</h4>
-                                    <p>Deep cleansing treatment</p>
-                                    <span class="price">$20</span>
+                                    <h4>Hot Towel and Scrub (Add-on)</h4>
+                                    <p>Relaxing hot towel with exfoliating facial scrub</p>
+                                    <span class="price">$15</span>
                                 </li>
-                                <li>
-                                    <h4>Head Shave</h4>
-                                    <p>Smooth finish with aftercare</p>
-                                    <span class="price">$30</span>
-                                </li>
+                                
                             </ul>
+                            
+                            
+                            
                         </div>
+                    </div>
+                    <div  class="w-100 price_wrap d-flex justify-content-center">
+                       <a class="text-decoration-none" href="pricing.html"> <h3>Explore More</h3> </a>
                     </div>
                 </div>
             </div>
@@ -282,13 +430,13 @@
         <section class="widget_section padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="col-lg-5 col-md-6 sm-padding">
                         <div class="footer_widget">
                             <img class="mb-15" src="img/logo.png" alt="Brand">
                             <p>At The Rare Barber, we honor the tradition of whakapapa through precision grooming. Our whānau welcomes you to experience tikanga Māori in every cut.</p>
                             <ul class="widget_social">
                                 <li><a href="#"><i class="social_facebook"></i></a></li>
-                                <li><a href="#"><i class="social_instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/therarebarbershop/"><i class="social_instagram"></i></a></li>
                                 <li><a href="#"><i class="social_tiktok"></i></a></li>
                             </ul>
                         </div>
@@ -297,41 +445,31 @@
                     <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6 sm-padding">
                         <div class="footer_widget">
-                            <h3>Our Whare</h3>
-                            <p>32 Mana Road, Te Aro<br>Wellington, Aotearoa 6011</p>
-                            <p>Kiaora@ManaBarber.co.nz<br>+64 4 888 1234</p>
+                            <h3>Here for You</h3>
+                            <p>Shop O95270071, 18 Queens Rd,<br>Panmure, Auckland 1072</p>
+                            <p>info@therarebarber.co.nz<br>022 1991136<br>
+021 1922917
+                            </p>
                             <p>After-hours bookings available</p>
                         </div>
                     </div>
         
                     <!-- Hours Column -->
-                    <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="col-lg-4 col-md-12 sm-padding">
                         <div class="footer_widget">
-                            <h3>Ngā Hāora</h3>
+                            <h3>Opening Hours</h3>
                             <ul class="opening_time">
-                                <li>Rāhina - Rāmere<br>9:00am - 6:00pm</li>
-                                <li>Rāhoroi<br>9:00am - 4:00pm</li>
-                                <li>Rātapu<br>10:00am - 2:00pm</li>
-                                <li>Public Holidays: Closed</li>
+                                <li>Monday : 10:00am - 6:00pm</li>
+                                <li>Tuesday : 9:00am - 7:00pm</li>
+                                <li>Wednesday : 9:00am - 7:00pm</li>
+                                <li>Thursday : 9:00am - 8:00pm</li>
+                                <li>Friday : 9:00am - 8:00pm</li>
+                                <li>Saturday : 8:00am - 5:00pm</li>
+                                <li>Sunday : Closed</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 sm-padding">
-                        <div class="footer_widget">
-                            <h3>Subscribe to our contents</h3>
-                            <div class="subscribe_form">
-                                <form action="#" class="subscribe_form">
-                                    <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address...">
-                                    <button type="submit" class="submit">SUBSCRIBE</button>
-                                    <div class="clearfix"></div>
-                                    <div id="subscribe-result">
-                                        <p class="subscription-success"></p>
-                                        <p class="subscription-error"></p>
-                                    </div>
-                                </form>
-                            </div><!-- Subscribe Form -->
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -343,7 +481,7 @@
                     </div>
                     <div class="col-md-6 xs-padding">
                         <ul class="footer_social">
-                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Appointment</a></li>
                             <li><a href="#">Terms</a></li>
                             <li><a href="#">Report Problem</a></li>
                         </ul>

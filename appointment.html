@@ -9,10 +9,24 @@
 		<meta name="description" content="BarberShop & Hair Salon HTML Template">
         <meta name="author" content="DynamicLayers">
 
-        <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
+        <title>The Rare Barber</title>
 
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+<!-- Standard Favicon -->
+<link rel="icon" type="image/x-icon" href="img/fav-icon/favicon.ico">
 
+<!-- Favicons for different resolutions -->
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" type="image/png" href="img/fav-icon/apple-touch-icon.png">
+
+<!-- Android Chrome Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="img/fav-icon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/fav-icon/android-chrome-512x512.png">
+
+<!-- Web Manifest -->
+<link rel="manifest" href="img/fav-icon/site.webmanifest">
         <!-- Elegant Font Icons CSS -->
         <link rel="stylesheet" href="css/elegant-font-icons.css">
         <!-- Elegant Line Icons CSS -->
@@ -39,6 +53,72 @@
         <link rel="stylesheet" href="css/responsive.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <style>
+.modern-hours-section {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  color: #333;
+}
+
+.section-heading .title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-heading .subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hour-item {
+  background: #fff;
+  /* border-radius: 12px; */
+  padding: 20px 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  transition: transform 0.3s ease;
+}
+
+.hour-item:hover {
+  transform: translateY(-3px);
+}
+
+.hour-item.closed {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.book-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #444;
+}
+
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -47,14 +127,17 @@
 
         <div id='preloader' >
             <div class='loader' >
-                <img src="img/loading.gif" width="80" alt="">
+                <img src="img/loading.gif" width="120" alt="">
             </div>
         </div><!-- Preloader -->
 
         <header id="header" class="header-section">
             <div class="container">
                 <nav class="navbar ">
-                    <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                    <a href="index.html" class="navbar-brand ">
+                        <img class="d-none d-md-block" src="img/logo.png" alt="The Rare Barber">
+                        <img class="d-md-none d-block" src="img/logo.png" width="140px" alt="The Rare Barber">
+                    </a>
                     <div class="d-flex menu-wrap align-items-center">
                        <div id="mainmenu" class="mainmenu">
                         <ul class="nav">
@@ -76,7 +159,7 @@
                          </ul>
                        </div>
                        <div class="header-btn">
-                           <a href="#" class="menu-btn">Make Appointment</a>
+                           <a href="appointment.html#book-appointment" class="menu-btn">Make Appointment</a>
                        </div>
                     </div>
                 </nav>
@@ -92,9 +175,63 @@
                 </div>
 		    </div>
 		</section><!--/. page_header -->
+<!--  -->
+<section class="modern-hours-section">
+    <div class="container">
+        <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
+            <h2>Opening Hours</h2>
+            <div class="heading-line"></div>
+            <p>We’re here to serve you with precision and care – six days a week.</p>
+        </div>
+      <!-- <div class="section-heading text-center">
+        <h2 class="title">Opening Hours</h2>
+        <p class="subtitle">Our doors are open to serve you with excellence.</p>
+      </div> -->
+      <div class="hours-grid">
+        <div class="hour-item">
+            
+          <span class="day">Monday</span>
+          <span class="time">10:00am – 6:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Tuesday</span>
+          <span class="time">9:00am – 7:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Wednesday</span>
+          <span class="time">9:00am – 7:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Thursday</span>
+          <span class="time">9:00am – 8:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Friday</span>
+          <span class="time">9:00am – 8:00pm</span>
+        </div>
+        <div class="hour-item">
+          <span class="day">Saturday</span>
+          <span class="time">8:00am – 5:00pm</span>
+        </div>
+        <div class="hour-item closed">
+            <span class="day">Sunday</span>
+            <span class="time">Closed</span>
+          </div>
+        </div>
+        <div class="text-center mt-4 w-100">
+            <a href="appointment.html#book-appointment" class="default_btn">Book an Appointment</a>
+        </div>
+        
+      <!-- <div class="text-center mt-4">
+        <a href="appointment.html" class="book-btn">Book an Appointment</a>
+      </div> -->
+    </div>
+  </section>
+  
 
+<!--  -->
      
-        <section class="book_section padding">
+        <section id="book-appointment" class="book_section padding">
             <div class="book_bg"></div>
             <div class="map_pattern"></div>
             <div class="container">
@@ -102,8 +239,8 @@
                     <div class="col-md-6 offset-md-6">
                        <form action="appointment.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
                            <div class="book_content">
-                            <h2>Reserve Your Mana Experience</h2>
-                            <p>Book your grooming ritual with Wellington's premier craftsmen.<br> 
+                            <h2>Reserve Your <br><span style="color: #9e8a78; font-weight: bold;"> The Rare Barber </span> Experience</h2>
+                            <p>Book your grooming ritual with Auckland's premier craftsmen.<br> 
                             We preserve the art of precision cutting while embracing modern style.</p>
                         </div>
                             <div class="form-group row">
@@ -150,6 +287,8 @@
                 </div>
             </div>
         </section><!-- /.book_section -->
+
+        
        <section class="cta_section padding">
             <div class="container">
                 <div class="display-table">
@@ -157,11 +296,12 @@
                         <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
                             <h2>Your Confidence<br>Is Our Craft</h2>
                             <p>Experience the Rare Barber difference - where every cut honors tradition<br>and elevates your personal style</p>
-                            <a href="#" class="default_btn">Book Your Ritual</a>
+                            <a href="appointment.html#book-appointment" class="default_btn">Book Your Ritual</a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </section><!-- /.cta_section -->
 
        <!-- ./sponsor_section -->
@@ -169,13 +309,13 @@
 		 <section class="widget_section padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="col-lg-5 col-md-6 sm-padding">
                         <div class="footer_widget">
                             <img class="mb-15" src="img/logo.png" alt="Brand">
                             <p>At The Rare Barber, we honor the tradition of whakapapa through precision grooming. Our whānau welcomes you to experience tikanga Māori in every cut.</p>
                             <ul class="widget_social">
                                 <li><a href="#"><i class="social_facebook"></i></a></li>
-                                <li><a href="#"><i class="social_instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/therarebarbershop/"><i class="social_instagram"></i></a></li>
                                 <li><a href="#"><i class="social_tiktok"></i></a></li>
                             </ul>
                         </div>
@@ -184,41 +324,31 @@
                     <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6 sm-padding">
                         <div class="footer_widget">
-                            <h3>Our Whare</h3>
-                            <p>32 Mana Road, Te Aro<br>Wellington, Aotearoa 6011</p>
-                            <p>Kiaora@ManaBarber.co.nz<br>+64 4 888 1234</p>
+                            <h3>Here for You</h3>
+                            <p>Shop O95270071, 18 Queens Rd,<br>Panmure, Auckland 1072</p>
+                            <p>info@therarebarber.co.nz<br>022 1991136<br>
+021 1922917
+                            </p>
                             <p>After-hours bookings available</p>
                         </div>
                     </div>
         
                     <!-- Hours Column -->
-                    <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="col-lg-4 col-md-12 sm-padding">
                         <div class="footer_widget">
-                            <h3>Ngā Hāora</h3>
+                            <h3>Opening Hours</h3>
                             <ul class="opening_time">
-                                <li>Rāhina - Rāmere<br>9:00am - 6:00pm</li>
-                                <li>Rāhoroi<br>9:00am - 4:00pm</li>
-                                <li>Rātapu<br>10:00am - 2:00pm</li>
-                                <li>Public Holidays: Closed</li>
+                                <li>Monday : 10:00am - 6:00pm</li>
+                                <li>Tuesday : 9:00am - 7:00pm</li>
+                                <li>Wednesday : 9:00am - 7:00pm</li>
+                                <li>Thursday : 9:00am - 8:00pm</li>
+                                <li>Friday : 9:00am - 8:00pm</li>
+                                <li>Saturday : 8:00am - 5:00pm</li>
+                                <li>Sunday : Closed</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 sm-padding">
-                        <div class="footer_widget">
-                            <h3>Subscribe to our contents</h3>
-                            <div class="subscribe_form">
-                                <form action="#" class="subscribe_form">
-                                    <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address...">
-                                    <button type="submit" class="submit">SUBSCRIBE</button>
-                                    <div class="clearfix"></div>
-                                    <div id="subscribe-result">
-                                        <p class="subscription-success"></p>
-                                        <p class="subscription-error"></p>
-                                    </div>
-                                </form>
-                            </div><!-- Subscribe Form -->
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section><!-- /.widget_section -->
@@ -231,7 +361,7 @@
                     </div>
                     <div class="col-md-6 xs-padding">
                         <ul class="footer_social">
-                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Appointment</a></li>
                             <li><a href="#">Terms</a></li>
                             <li><a href="#">Report Problem</a></li>
                         </ul>

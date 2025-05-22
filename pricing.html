@@ -9,10 +9,24 @@
 		<meta name="description" content="BarberShop & Hair Salon HTML Template">
         <meta name="author" content="DynamicLayers">
        
-        <title>Barber Shop || BarberShop Hair Salon HTML Template</title>
+        <title>The Rare Barber</title>
         
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+<!-- Standard Favicon -->
+<link rel="icon" type="image/x-icon" href="img/fav-icon/favicon.ico">
 
+<!-- Favicons for different resolutions -->
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" type="image/png" href="img/fav-icon/apple-touch-icon.png">
+
+<!-- Android Chrome Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="img/fav-icon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/fav-icon/android-chrome-512x512.png">
+
+<!-- Web Manifest -->
+<link rel="manifest" href="img/fav-icon/site.webmanifest">
         <!-- Elegant Font Icons CSS -->
         <link rel="stylesheet" href="css/elegant-font-icons.css">
         <!-- Elegant Line Icons CSS -->
@@ -39,6 +53,154 @@
         <link rel="stylesheet" href="css/responsive.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <style>
+ .luxury-section {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  padding: 60px 30px;
+  border-radius: 20px;
+}
+
+.luxury-card-horizontal {
+  background: #262626;
+  border-radius: 16px;
+  padding: 30px 20px;
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #3a3a3a;
+
+  /* Flex layout for uniform height and positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 120px; /* Adjust as needed for your content */
+}
+
+.premier-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffe692, #9e8a78);
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 100%;
+  color: #000;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 120px;
+}
+
+/* Shiny overlay effect */
+.premier-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 70%);
+  transform: rotate(25deg);
+  animation: shine 3s infinite;
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
+
+
+.card-icon {
+  font-size: 2rem;
+  color: #e0c97f;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Allows this to take extra space if needed */
+}
+
+.card-price {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #e0c97f;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  margin-top: auto; /* Forces price to bottom */
+}
+
+
+
+.p-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.p-card-description {
+  font-size: 1rem;
+  color: #424242;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Allows this to take extra space if needed */
+}
+
+.p-card-price {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color:#1a1a1a;
+  color:  #e0c97f;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  margin-top: auto; /* Forces price to bottom */
+}
+
+.p-card-price:hover {
+  background-color: #f0db88;
+}
+
+
+.luxury-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  color: #e0c97f;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -47,14 +209,17 @@
         
         <div id='preloader' >
             <div class='loader' >
-                <img src="img/loading.gif" width="80" alt="">
+                <img src="img/loading.gif" width="120" alt="">
             </div>
         </div><!-- Preloader -->
         
         <header id="header" class="header-section">
             <div class="container">
                 <nav class="navbar ">
-                    <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Barbershop"></a>
+                    <a href="index.html" class="navbar-brand ">
+                        <img class="d-none d-md-block" src="img/logo.png" alt="The Rare Barber">
+                        <img class="d-md-none d-block" src="img/logo.png" width="140px" alt="The Rare Barber">
+                    </a>
                     <div class="d-flex menu-wrap align-items-center">
                        <div id="mainmenu" class="mainmenu">
                            <ul class="nav">
@@ -76,7 +241,7 @@
                          </ul>
                        </div>
                        <div class="header-btn">
-                           <a href="#" class="menu-btn">Make Appointment</a>
+                           <a href="appointment.html#book-appointment" class="menu-btn">Make Appointment</a>
                        </div>
                     </div>
                 </nav>
@@ -95,101 +260,186 @@
        
         <section class="pricing_section bg-grey bd-bottom padding">
             <div class="container">
-                <div class="row">
+                  <!-- Luxury -->
+<!-- Luxury Horizontal Cards -->
+<div class="row luxury-section">
+    <div class="col-12">
+        <h3 class="luxury-title">Luxury Grooming Packages</h3>
+    </div>
+    <div class="col-md-3 col-12 mt-5 mt-md-0 d-flex">
+        <div class="luxury-card-horizontal">
+            <div class="card-icon"><i class="fas fa-crown"></i></div>
+            <h4 class="card-title">The Rare Experience</h4>
+            <p class="card-description">Signature Face Massage, Hot Towel Shave, Scalp Massage, Scrub and Wax</p>
+            <span class="card-price">$99</span>
+        </div>
+    </div>
+    <div class="col-md-3 col-12 mt-5 mt-md-0 d-flex">
+        <div class="luxury-card-horizontal">
+            <div class="card-icon"><i class="fas fa-gem"></i></div>
+            <h4 class="card-title">The Exclusive</h4>
+            <p class="card-description">Haircut + Beard Shaping + Facial Cleanse + Waxing</p>
+            <span class="card-price">$150</span>
+        </div>
+    </div>
+    <div class="col-md-3 col-12 mt-5 mt-md-0 d-flex">
+        <div class="premier-card">
+            <div class="card-icon"><i class="fas fa-gift"></i></div>
+            <h4 class="p-card-title">Groom’s Day Out</h4>
+            <p class="p-card-description">Full Service + Styling + Gift Pack</p>
+            <span class="p-card-price">$199</span>
+        </div>
+    </div>
+    <div class="col-md-3 col-12 mt-5 mt-md-0 d-flex">
+        <div class="luxury-card-horizontal">
+            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+            <h4 class="card-title">The Express Refresh</h4>
+            <p class="card-description">Head Shave + Hot Towel Shave + Wax</p>
+            <span class="card-price">$70</span>
+        </div>
+    </div>
+</div>
+
+<!-- End Luxury -->
+                <div class="row mt-5">
                     <!-- Haircuts Column -->
                     <div class="col-lg-4 col-md-6 sm-padding">
                         <div class="price_wrap">
-                            <h3>Haircuts</h3>
+                            <h3>Haircuts & Styling</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Classic Men's Cut</h4>
-                                    <p>Traditional cut with clipper finish & detail work</p>
-                                    <span class="price">$35</span>
+                                    <h4>Signature Haircut <br>(Cut, Style)</h4>
+                                    <p>Tailored haircut with styling finish</p>
+                                    <span class="price">$40</span>
                                 </li>
                                 <li>
                                     <h4>Skin Fade</h4>
-                                    <p>Precision gradient fade with sharp line work</p>
-                                    <span class="price">$40</span>
+                                    <p>Precision skin fade with sharp detailing</p>
+                                    <span class="price">$50</span>
                                 </li>
                                 <li>
-                                    <h4>Scissor Cut</h4>
-                                    <p>Shears-only cut for natural texture & movement</p>
-                                    <span class="price">$40</span>
+                                    <h4>Taper Fade</h4>
+                                    <p>Clean, gradual fade for a sharp look</p>
+                                    <span class="price">$45</span>
                                 </li>
                                 <li>
-                                    <h4>Kids Cut (Under 12)</h4>
-                                    <p>Fun, age-appropriate styles for young gents</p>
-                                    <span class="price">$25</span>
+                                    <h4>Restyle <br>(Complete Transformation)</h4>
+                                    <p>Full style change for a refreshed look</p>
+                                    <span class="price">$60</span>
                                 </li>
                                 <li>
-                                    <h4>Senior Cut (65+)</h4>
-                                    <p>Classic cuts with comfortable seating</p>
-                                    <span class="price">$30</span>
+                                    <h4>Buzz Cut <br>(One Length, Clippers)</h4>
+                                    <p>Simple, uniform clipper cut</p>
+                                    <span class="price">$55</span>
+                                </li>
+                                <li>
+                                    <h4>Beard Trim & Line-Up</h4>
+                                    <p>Shaped beard with defined edges</p>
+                                    <span class="price">$15</span>
+                                </li>
+                                <li>
+                                    <h4>Hot Towel Shave <br>(Traditional Razor)</h4>
+                                    <p>Classic shave with relaxing hot towel</p>
+                                    <span class="price">$35</span>
+                                </li>
+                                <li>
+                                    <h4>Hair & Beard Combo<br> (Cut + Beard Trim)</h4>
+                                    <p>Complete grooming – haircut & beard trim</p>
+                                    <span class="price">$75</span>
                                 </li>
                             </ul>
                         </div>
+                        
                     </div>
+                    <!-- Luxury -->
+               
+                    <!--  -->
         
                     <!-- Beard & Shaving Column -->
                     <div class="col-lg-4 col-md-6 sm-padding">
                         <div class="price_wrap">
-                            <h3>Beard & Shaving</h3>
+                            <h3>Kids & Teen</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Beard Trim</h4>
-                                    <p>Precision shaping & length balancing</p>
-                                    <span class="price">$20</span>
+                                    <h4>Zero Fade Students Cut <br> (Under 12)</h4>
+                                    <p>Sharp zero fade style tailored for kids</p>
+                                    <span class="price">$35</span>
                                 </li>
                                 <li>
-                                    <h4>Hot Towel Shave</h4>
-                                    <p>Traditional straight razor shave with aromatherapy</p>
+                                    <h4>Standard Students Cut</h4>
+                                    <p>Clean and classic haircut for students</p>
                                     <span class="price">$30</span>
                                 </li>
                                 <li>
-                                    <h4>Beard Line-up</h4>
-                                    <p>Crisp neckline & cheek definition</p>
-                                    <span class="price">$15</span>
+                                    <h4>Teenage Cut <br>(13–16)</h4>
+                                    <p>Trendy and age-appropriate haircut</p>
+                                    <span class="price">$40</span>
                                 </li>
                                 <li>
-                                    <h4>Full Beard Styling</h4>
-                                    <p>Complete beard transformation & conditioning</p>
-                                    <span class="price">$25</span>
+                                    <h4>Teenager Style Cut<br> (13–16)</h4>
+                                    <p>Styled finish with modern flair for teens</p>
+                                    <span class="price">$35</span>
                                 </li>
                                 <li>
-                                    <h4>Head Shave</h4>
-                                    <p>Smooth razor finish with aftershave treatment</p>
-                                    <span class="price">$30</span>
+                                    <h4>Zero Fade Cut<br> (Teen 13–16)</h4>
+                                    <p>Zero fade style with precise detail for teens</p>
+                                    <span class="price">$42</span>
                                 </li>
                             </ul>
+                            
                         </div>
                     </div>
         
                     <!-- Packages & Extras Column -->
                     <div class="col-lg-4 col-md-12 sm-padding">
                         <div class="price_wrap">
-                            <h3>Premium Packages</h3>
+                            <h3>Add-ons & Extras</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Haircut + Beard Trim</h4>
-                                    <p>Complete style refresh package</p>
-                                    <span class="price">$50</span>
+                                    <h4>Razor Line Enhancement</h4>
+                                    <p>Sharp, defined edges using razor precision</p>
+                                    <span class="price">$15</span>
                                 </li>
                                 <li>
-                                    <h4>Haircut + Hot Towel Shave</h4>
-                                    <p>Ultimate grooming experience</p>
-                                    <span class="price">$60</span>
+                                    <h4>Black Mask / Peel-Off Cleanse</h4>
+                                    <p>Deep-cleansing peel-off facial treatment</p>
+                                    <span class="price">$25</span>
                                 </li>
                                 <li>
-                                    <h4>Full Grooming Package</h4>
-                                    <p>Cut, beard trim, wash & style</p>
-                                    <span class="price">$70</span>
+                                    <h4>Hot Towel and Scrub (Add-on)</h4>
+                                    <p>Relaxing hot towel with exfoliating facial scrub</p>
+                                    <span class="price">$15</span>
+                                </li>
+                                <li>
+                                    <h4>Eyebrow Shape (Razor/Thread)</h4>
+                                    <p>Clean eyebrow shaping with razor or thread</p>
+                                    <span class="price">$15</span>
+                                </li>
+                                <li>
+                                    <h4>Each Wax (ears, nose, cheeks, eyebrows)</h4>
+                                    <p>Individual waxing for specific facial areas</p>
+                                    <span class="price">$5</span>
+                                </li>
+                                <li>
+                                    <h4>Full Wax</h4>
+                                    <p>Comprehensive facial waxing service</p>
+                                    <span class="price">$20</span>
                                 </li>
                             </ul>
                             
                             
+                            
                         </div>
                     </div>
+
+
+
+
                 </div>
+
+                
+                  
+
             </div>
         </section>
         
@@ -201,7 +451,7 @@
                         <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
                             <h2>Your Confidence<br>Is Our Craft</h2>
                             <p>Experience the Rare Barber difference - where every cut honors tradition<br>and elevates your personal style</p>
-                            <a href="#" class="default_btn">Book Your Ritual</a>
+                            <a href="appointment.html#book-appointment" class="default_btn">Book Your Ritual</a>
                         </div>
                     </div>
                 </div>
@@ -213,13 +463,13 @@
 		 <section class="widget_section padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="col-lg-5 col-md-6 sm-padding">
                         <div class="footer_widget">
                             <img class="mb-15" src="img/logo.png" alt="Brand">
                             <p>At The Rare Barber, we honor the tradition of whakapapa through precision grooming. Our whānau welcomes you to experience tikanga Māori in every cut.</p>
                             <ul class="widget_social">
                                 <li><a href="#"><i class="social_facebook"></i></a></li>
-                                <li><a href="#"><i class="social_instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/therarebarbershop/"><i class="social_instagram"></i></a></li>
                                 <li><a href="#"><i class="social_tiktok"></i></a></li>
                             </ul>
                         </div>
@@ -228,41 +478,31 @@
                     <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6 sm-padding">
                         <div class="footer_widget">
-                            <h3>Our Whare</h3>
-                            <p>32 Mana Road, Te Aro<br>Wellington, Aotearoa 6011</p>
-                            <p>Kiaora@ManaBarber.co.nz<br>+64 4 888 1234</p>
+                            <h3>Here for You</h3>
+                            <p>Shop O95270071, 18 Queens Rd,<br>Panmure, Auckland 1072</p>
+                            <p>info@therarebarber.co.nz<br>022 1991136<br>
+021 1922917
+                            </p>
                             <p>After-hours bookings available</p>
                         </div>
                     </div>
         
                     <!-- Hours Column -->
-                    <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="col-lg-4 col-md-12 sm-padding">
                         <div class="footer_widget">
-                            <h3>Ngā Hāora</h3>
+                            <h3>Opening Hours</h3>
                             <ul class="opening_time">
-                                <li>Rāhina - Rāmere<br>9:00am - 6:00pm</li>
-                                <li>Rāhoroi<br>9:00am - 4:00pm</li>
-                                <li>Rātapu<br>10:00am - 2:00pm</li>
-                                <li>Public Holidays: Closed</li>
+                                <li>Monday : 10:00am - 6:00pm</li>
+                                <li>Tuesday : 9:00am - 7:00pm</li>
+                                <li>Wednesday : 9:00am - 7:00pm</li>
+                                <li>Thursday : 9:00am - 8:00pm</li>
+                                <li>Friday : 9:00am - 8:00pm</li>
+                                <li>Saturday : 8:00am - 5:00pm</li>
+                                <li>Sunday : Closed</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 sm-padding">
-                        <div class="footer_widget">
-                            <h3>Subscribe to our contents</h3>
-                            <div class="subscribe_form">
-                                <form action="#" class="subscribe_form">
-                                    <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address...">
-                                    <button type="submit" class="submit">SUBSCRIBE</button>
-                                    <div class="clearfix"></div>
-                                    <div id="subscribe-result">
-                                        <p class="subscription-success"></p>
-                                        <p class="subscription-error"></p>
-                                    </div>
-                                </form>
-                            </div><!-- Subscribe Form -->
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section><!-- /.widget_section -->
@@ -275,7 +515,7 @@
                     </div>
                     <div class="col-md-6 xs-padding">
                         <ul class="footer_social">
-                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Appointment</a></li>
                             <li><a href="#">Terms</a></li>
                             <li><a href="#">Report Problem</a></li>
                         </ul>
