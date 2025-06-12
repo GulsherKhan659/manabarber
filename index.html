@@ -56,6 +56,53 @@
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
         <style>
+
+            /*  */
+            /*  */
+.insta-wall {
+  padding: 50px 20px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.insta-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.insta-title p {
+  color: #b29b7f;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.insta-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.insta-grid img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+            /*  */
+            /*  */
+
+            /* /// */
             .modern-hours-section {
   background-color: #1b1b1b;
   padding: 80px 20px;
@@ -124,6 +171,58 @@
 .hidden{
     display: none !important;
 }
+
+.price_list li{
+    border-right: 2px solid #000 !important;
+    border: 1px solid #000;
+    padding: 10px;
+    /* background-color: #e0c97f; */
+    /* padding: 10px; */
+    /* margin: 10px; */
+}
+
+.price{
+    background: #000;
+    padding: 10px;
+    color: #fff !important;
+    /* border-radius: 4px; */
+}
+.price_wrap h3{
+    background-color: #000 !important;
+}
+.service_box{
+                background-color: #9e8a78;
+                  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+              border-bottom: 2px solid #4b3f35;
+            }
+        
+            .service_box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            }
+        
+            .service_box i {
+                font-size: 3rem;
+                color:#fff;
+                margin-bottom: 20px;
+                display: block;
+            }
+        
+            .service_box h3 {
+                margin-bottom: 15px;
+                font-size: 1.25rem;
+                width: 100%;
+                 color: #fff;
+            }
+        
+            .service_box p {
+                margin-bottom: 0;
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                line-height: 1.6;
+                color: #fff;
+            }
         </style>
 
 <script>
@@ -182,8 +281,8 @@
                        </div>
                        
                        <div class="header-btn ">
-                        <a href="appointment.html#book-appointment" class="menu-btn">Make Appointment</a>
-                    </div>
+                        <a href="appointment.html#book-appointment" class="menu-btn animate-pulse">BOOK NOW</a>
+                      </div>
                 </nav>
             </div>
 		</header> <!--.header-section -->
@@ -196,7 +295,7 @@
                             <h3>More Than a Haircut - It's Tradition</h3>
                             <h1>Where Precision<br>Meets Style</h1>
                             <p>At The Rare Barber, we honor the art of grooming with respect for heritage<br>and attention to every detail.</p>
-                            <a href="appointment.html#book-appointment" class="default_btn">Book Now</a>
+                            <a href="appointment.html#book-appointment" class="default_btn">BOOK NOW</a>
                         </div>
                     </div>
                 </li>
@@ -344,20 +443,22 @@
                             <h3>Haircuts & Styling</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Signature Haircut <br>(Cut, Style)</h4>
-                                    <p>Tailored haircut with styling finish</p>
-                                    <span class="price">$40</span>
+                                    <h4>Taper Fade</h4>
+                                    <p>Clean, gradual fade for a sharp look</p>
+                                    <span class="price">$45</span>
                                 </li>
+                                
                                 <li>
                                     <h4>Skin Fade</h4>
                                     <p>Precision skin fade with sharp detailing</p>
                                     <span class="price">$50</span>
                                 </li>
                                 <li>
-                                    <h4>Taper Fade</h4>
-                                    <p>Clean, gradual fade for a sharp look</p>
-                                    <span class="price">$45</span>
+                                    <h4>Signature Haircut <br>(Cut, Style)</h4>
+                                    <p>Tailored haircut with styling finish</p>
+                                    <span class="price">$40</span>
                                 </li>
+                                
                                 
                             </ul>
                         </div>
@@ -373,8 +474,8 @@
                             <h3>Kids & Teen</h3>
                             <ul class="price_list">
                                 <li>
-                                    <h4>Zero Fade Students Cut <br> (Under 12)</h4>
-                                    <p>Sharp zero fade style tailored for kids</p>
+                                    <h4>Teenager Style Cut </h4>
+                                    <p>Styled finish with modern flair for teens</p>
                                     <span class="price">$35</span>
                                 </li>
                                 <li>
@@ -410,7 +511,7 @@
                                 </li>
                                 <li>
                                     <h4>Hot Towel and Scrub (Add-on)</h4>
-                                    <p>Relaxing hot towel with exfoliating facial scrub</p>
+                                    <p>Relaxing hot towel with exfoliating<br> facial scrub</p>
                                     <span class="price">$15</span>
                                 </li>
                                 
@@ -426,6 +527,26 @@
                 </div>
             </div>
         </section>
+
+            <section class="insta-wall">
+  <div class="insta-title">
+        <!-- <h2>Follow Us on Instagram</h2> -->
+    <p>Stay fresh. Stay styled. Follow us <a style="color: #9e8a78;" class="text-decoration-none" href="https://www.instagram.com/therarebarbershop/"> @therarebarbershop</a></p>
+  </div>
+  <div class="insta-grid">
+    <a href="https://www.instagram.com/therarebarbershop/"><img src="img/instagram/insta1.jpg" alt="Insta post 1"></a>
+    <a href="https://www.instagram.com/therarebarbershop/"><img src="img/instagram/logo.jpg" alt="Insta post 2">
+ </a>   <a href="https://www.instagram.com/therarebarbershop/"><img src="img/instagram/insta2.jpg" alt="Insta post 3"></a>
+    <a href="https://www.instagram.com/therarebarbershop/"><img src="img/instagram/insta3.jpg" alt="Insta post 4"></a>
+    
+    <a href="https://www.instagram.com/therarebarbershop/"><img src="img/instagram/insta1.jpg" alt="Insta post 8"></a>
+    <a href="https://www.instagram.com/therarebarbershop/"><img src="img/instagram/insta5.jpg" alt="Insta post 6"></a>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+
+
         
         <!-- Updated Testimonials Section -->
         <section id="reviews" class="testimonial_section padding">
@@ -464,8 +585,10 @@
                         <div class="footer_widget">
                             <h3>Here for You</h3>
                             <p>Shop O95270071, 18 Queens Rd,<br>Panmure, Auckland 1072</p>
-                            <p>info@therarebarber.co.nz<br>022 1991136<br>
-021 1922917
+                            
+                            <p>info@therarebarber.co.nz
+                            <br>022 1991136
+                            <br>021 1922917
                             </p>
                             <p>After-hours bookings available</p>
                         </div>
